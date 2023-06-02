@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar Imagen</title>
+    <style>
+        /* Estilos CSS para centrar el contenedor de imagen y el título */
+        #image-container {
+            text-align: center;
+        }
+        h1 {
+            text-align: center;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var image = document.getElementById("image");
+            var imageState = 1;
+
+            image.addEventListener("click", function() {
+                // Cambia la imagen y el estado en función del estado actual
+                if (imageState === 1) {
+                    image.src = "distracted2.png";
+                    imageState = 2;
+                } else if (imageState === 2) {
+                    image.src = "distracted3.png";
+                    imageState = 3;
+                } else if (imageState === 3) {
+                    image.src = "distracted1.png";
+                    imageState = 1;
+                }
+            });
+        });
+    </script>
+</head>
+<body> 
+    <h1>Cambiar imagen</h1>
+    <br>
+    <br>
+    <div id="image-container">
+        <img src="distracted1.png" id="image">
+    </div>
+</body>
+</html>
